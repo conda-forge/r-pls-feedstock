@@ -1,7 +1,7 @@
 About r-pls
 ===========
 
-Home: http://mevik.net/work/software/pls.html
+Home: http://mevik.net/work/software/pls.html, https://github.com/bhmevik/pls
 
 Package license: GPL-2
 

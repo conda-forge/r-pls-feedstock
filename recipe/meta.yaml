@@ -1,5 +1,4 @@
-{% set version = "2.7-0" %}
-
+{% set version = '2.7-0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +9,12 @@ package:
 source:
   fn: pls_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/pls_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/pls/pls_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/pls_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/pls/pls_{{ version }}.tar.gz
   sha256: 5ddc1249a14d69a7a39cc4ae81595ac8c0fbb1e46c911af67907baddeac35875
 
 build:
+  merge_build_host: True  # [win]
   number: 0
   skip: true  # [win32]
   rpaths:
@@ -23,17 +23,19 @@ build:
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
   run:
     - r-base
 
 test:
   commands:
-    - $R -e "library('pls')"  # [not win]
+    - $R -e "library('pls')"           # [not win]
     - "\"%R%\" -e \"library('pls')\""  # [win]
 
 about:
-  home: http://mevik.net/work/software/pls.html
+  home: http://mevik.net/work/software/pls.html, https://github.com/bhmevik/pls
   license: GPL-2
   summary: Multivariate regression methods Partial Least Squares Regression (PLSR), Principal
     Component Regression (PCR) and Canonical Powered Partial Least Squares (CPPLS).
@@ -43,8 +45,9 @@ about:
 
 extra:
   recipe-maintainers:
-    - cbrueffer
     - johanneskoester
     - bgruening
     - daler
     - jdblischak
+    - cbrueffer
+    - dbast
