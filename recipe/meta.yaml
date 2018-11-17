@@ -14,9 +14,9 @@ source:
   sha256: 5ddc1249a14d69a7a39cc4ae81595ac8c0fbb1e46c911af67907baddeac35875
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 0
-  skip: true  # [win32]
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
@@ -40,8 +40,7 @@ about:
   summary: Multivariate regression methods Partial Least Squares Regression (PLSR), Principal
     Component Regression (PCR) and Canonical Powered Partial Least Squares (CPPLS).
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-2'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
