@@ -1,4 +1,4 @@
-{% set version = '2.7-0' %}
+{% set version = '2.7-1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: pls_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/pls_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pls/pls_{{ version }}.tar.gz
-  sha256: 5ddc1249a14d69a7a39cc4ae81595ac8c0fbb1e46c911af67907baddeac35875
+  sha256: f8fd817fc2aa046970c49a9a481489a3a2aef8b6f09293fb1f0218f00bfd834b
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -44,9 +43,25 @@ about:
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+    - conda-forge/r
+
+# Package: pls
+# Title: Partial Least Squares and Principal Component Regression
+# Version: 2.7-1
+# Date: 2019-03-23
+# Authors@R: c(person("Bjrn-Helge", "Mevik", role = c("aut", "cre"), email = "b-h@mevik.net"), person("Ron", "Wehrens", role = "aut"), person("Kristian Hovde", "Liland", role = "aut"), person("Paul",  "Hiemstra", role = "ctb"))
+# Author: Bjrn-Helge Mevik [aut, cre], Ron Wehrens [aut], Kristian Hovde Liland [aut], Paul Hiemstra [ctb]
+# Maintainer: Bjrn-Helge Mevik <b-h@mevik.net>
+# Encoding: UTF-8
+# LazyData: yes
+# Description: Multivariate regression methods Partial Least Squares Regression (PLSR), Principal Component Regression (PCR) and Canonical Powered Partial Least Squares (CPPLS).
+# Depends: R (>= 2.10)
+# Imports: grDevices, graphics, methods, stats
+# Suggests: MASS, parallel, Rmpi, testthat, RUnit
+# License: GPL-2
+# URL: http://mevik.net/work/software/pls.html, https://github.com/bhmevik/pls
+# BugReports: https://github.com/bhmevik/pls/issues
+# NeedsCompilation: no
+# Packaged: 2019-03-23 17:32:09 UTC; bhm
+# Repository: CRAN
+# Date/Publication: 2019-03-23 18:00:03 UTC
