@@ -1,4 +1,4 @@
-{% set version = '2.7-1' %}
+{% set version = "2.7-2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pls_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pls/pls_{{ version }}.tar.gz
-  sha256: f8fd817fc2aa046970c49a9a481489a3a2aef8b6f09293fb1f0218f00bfd834b
+  sha256: 67e91e36dbebeb2f2d9c9b88f310dc00f70de275e5f382f392e72dd36af42b88
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
