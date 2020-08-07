@@ -5,7 +5,7 @@ Home: http://mevik.net/work/software/pls.html, https://github.com/bhmevik/pls
 
 Package license: GPL-2
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Multivariate regression methods Partial Least Squares Regression (PLSR), Principal Component Regression (PCR) and Canonical Powered Partial Least Squares (CPPLS).
 
