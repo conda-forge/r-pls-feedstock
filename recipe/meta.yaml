@@ -1,4 +1,4 @@
-{% set version = "2.7-2" %}
+{% set version = "2.7-3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pls_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pls/pls_{{ version }}.tar.gz
-  sha256: 67e91e36dbebeb2f2d9c9b88f310dc00f70de275e5f382f392e72dd36af42b88
+  sha256: 8f1d960ab74f05fdd11c4c7a3d30ff9e263fc658f5690b67278ca7c045d0742c
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -36,10 +36,9 @@ test:
 about:
   home: http://mevik.net/work/software/pls.html, https://github.com/bhmevik/pls
   license: GPL-2
-  summary: Multivariate regression methods Partial Least Squares Regression (PLSR), Principal
-    Component Regression (PCR) and Canonical Powered Partial Least Squares (CPPLS).
+  summary: Multivariate regression methods Partial Least Squares Regression (PLSR), Principal Component Regression (PCR) and Canonical Powered Partial Least Squares (CPPLS).
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
