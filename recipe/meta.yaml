@@ -35,10 +35,11 @@ test:
 
 about:
   home: http://mevik.net/work/software/pls.html, https://github.com/bhmevik/pls
-  license: GPL-2
+  license: GPL-2.0-only
   summary: Multivariate regression methods Partial Least Squares Regression (PLSR), Principal Component Regression (PCR) and Canonical Powered Partial Least Squares (CPPLS).
   license_family: GPL2
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
