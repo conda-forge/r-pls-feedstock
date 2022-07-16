@@ -1,4 +1,4 @@
-{% set version = "2.8-0" %}
+{% set version = "2.8-1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pls_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pls/pls_{{ version }}.tar.gz
-  sha256: eff3a92756ca34cdc1661fa36d2bf7fc8e9f4132d2f1ef9ed0105c83594618bf
+  sha256: e22e7febeef1a6800b97ee7f6eb03dc1d6681aba7f9298449c9e6375fa78f28c
 
 build:
   merge_build_host: true  # [win]
