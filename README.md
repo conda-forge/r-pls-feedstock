@@ -1,11 +1,11 @@
-About r-pls
-===========
+About r-pls-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-pls-feedstock/blob/main/LICENSE.txt)
 
 Home: http://mevik.net/work/software/pls.html, https://github.com/bhmevik/pls
 
 Package license: GPL-2.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-pls-feedstock/blob/main/LICENSE.txt)
 
 Summary: Multivariate regression methods Partial Least Squares Regression (PLSR), Principal Component Regression (PCR) and Canonical Powered Partial Least Squares (CPPLS).
 
