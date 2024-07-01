@@ -1,6 +1,5 @@
 {% set version = "2.8-3" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-pls
@@ -13,8 +12,7 @@ source:
   sha256: e6eb728dd38cd4867698df06e02601ed767e69098b1daadde5beef634ae66be3
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
