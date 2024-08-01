@@ -1,4 +1,4 @@
-{% set version = "2.8-3" %}
+{% set version = "2.8-4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pls_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pls/pls_{{ version }}.tar.gz
-  sha256: e6eb728dd38cd4867698df06e02601ed767e69098b1daadde5beef634ae66be3
+  sha256: 785b1b63639754811bec124fcd46bd821c76611380f49a7555695a2969b3d562
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
